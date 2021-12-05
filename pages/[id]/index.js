@@ -21,7 +21,7 @@ export default function Note({ note }) {
     const deleteNote = async () => {
         const noteId = router.query.id;
         try {
-            const deleted = await fetch(`${process.env.API_URL}/api/notes/${noteId}`, {
+            const deleted = await fetch(`/api/notes/${noteId}`, {
                 method: 'DELETE'
             });
             router.back();
